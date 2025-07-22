@@ -47,7 +47,13 @@ section {
 h1, h2 {
   text-align: center;
 }
-
+site-title {
+  font-size: 5rem;        /* ← ここで文字の大きさを設定 */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 4rem;
+  letter-spacing: 2px;
+}
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
