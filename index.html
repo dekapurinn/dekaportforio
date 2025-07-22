@@ -1,118 +1,78 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dekapurin 3DCG Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dekapurin Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ロゴ -->
+  <div id="logo">dekapurin</div>
+
+  <!-- ナビゲーション -->
   <nav>
     <ul>
-      <li><a href="#about">概要</a></li>
-      <li><a href="#works">個人制作</a></li>
-      <li><a href="#achievements">実績</a></li>
-      <li><a href="#contact">SNS</a></li>
+      <li><a href="#overview">概要</a></li>
+      <li><a href="#personal">個人制作</a></li>
+      <li><a href="#works">実績</a></li>
+      <li><a href="#sns">SNS</a></li>
     </ul>
   </nav>
 
-
-  <section id="about" class="fade-in">
+  <!-- 概要 -->
+  <section id="overview">
     <h2>概要</h2>
-    <p>
-      私はBlenderを中心に、アニメーション、スカルプト、ハードサーフェスなどを活かして作品制作をしています。<br>
-      このページでは、個人制作や実績、SNSなどをまとめています。
-    </p>
+    <p>ここに自己紹介やスキルなどの概要文を記載します（後で差し替え可能）。</p>
   </section>
 
-  <section id="works" class="fade-in">
+  <!-- 個人制作 -->
+  <section id="personal">
     <h2>個人制作</h2>
     <div class="work-gallery">
-      <!-- 6作品 -->
-
       <div class="work">
-        <div class="image-container">
-          <img src="images/work1.jpg" alt="作品1" />
-        </div>
+        <div class="image-container"><img src="images/work1.jpg" alt="作品1"></div>
         <h3>作品タイトル1</h3>
-        <p>作品の説明1</p>
-        <a href="https://example.com" target="_blank">詳細を見る</a>
+        <p>簡単な説明文1</p>
       </div>
-    
       <div class="work">
-        <div class="image-container">
-          <img src="images/work2.png" alt="作品2" />
-        </div>
+        <div class="image-container"><img src="images/work2.jpg" alt="作品2"></div>
         <h3>作品タイトル2</h3>
-        <p>作品の説明2</p>
-        <a href="https://example.com" target="_blank">詳細を見る</a>
+        <p>簡単な説明文2</p>
       </div>
-    
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work3.jpg" alt="作品3" />
-        </div>
-        <h3>作品タイトル3</h3>
-        <p>作品の説明3</p>
-        <a href="https://example.com" target="_blank">詳細を見る</a>
-      </div>
-    
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work4.jpg" alt="作品4" />
-        </div>
-        <h3>作品タイトル4</h3>
-        <p>作品の説明4</p>
-        <a href="https://example.com" target="_blank">詳細を見る</a>
-      </div>
-    
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work5.png" alt="作品5" />
-        </div>
-        <h3>作品タイトル5</h3>
-        <p>作品の説明5</p>
-        <a href="https://example.com" target="_blank">詳細を見る</a>
-      </div>
-    
-      <div class="work">
-        <div class="image-container">
-          <img src="images/work6.png" alt="作品6" />
-        </div>
-        <h3>作品タイトル6</h3>
-        <p>作品の説明6</p>
-        <a href="https://example.com" target="_blank">詳細を見る</a>
-      </div>
-    
     </div>
   </section>
 
-  <section id="achievements" class="fade-in">
+  <!-- 実績 -->
+  <section id="works">
     <h2>実績</h2>
-    <ul>
-      <li>2023年：「○○コンテスト」入賞</li>
-      <li>2024年：展示会「●●展」参加</li>
-      <li>2025年：ロボットフェス出展予定</li>
-    </ul>
+    <div class="work-gallery">
+      <div class="work">
+        <div class="image-container"><img src="images/work3.jpg" alt="作品3"></div>
+        <h3>実績タイトル1</h3>
+        <p>実績説明1</p>
+      </div>
+      <div class="work">
+        <div class="image-container"><img src="images/work4.jpg" alt="作品4"></div>
+        <h3>実績タイトル2</h3>
+        <p>実績説明2</p>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="fade-in">
-    <h2>各種SNS</h2>
-    <ul>
-      <li><a href="https://twitter.com/yourhandle" target="_blank">Twitter</a></li>
-      <li><a href="https://instagram.com/yourhandle" target="_blank">Instagram</a></li>
-      <li><a href="mailto:yourmail@example.com">Email</a></li>
-    </ul>
+  <!-- SNS -->
+  <section id="sns">
+    <h2>SNS</h2>
+    <p><a href="https://twitter.com/youraccount" target="_blank">Twitter</a></p>
+    <p><a href="https://instagram.com/youraccount" target="_blank">Instagram</a></p>
   </section>
 
-  <footer class="fade-in">
-    <p>&copy; 2025 Dekapurin</p>
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 dekapurin. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
