@@ -1,13 +1,18 @@
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in-view');
+
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+// 閉じるボタン以外でも画面外をクリックするとモーダルを閉じる
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
     }
   });
-}, {
-  threshold: 0.2
-});
-
-document.querySelectorAll('.fade-in, .work').forEach(el => {
-  observer.observe(el);
-});
+};
