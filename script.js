@@ -7,7 +7,6 @@ function closeModal(id) {
   document.getElementById(id).style.display = 'none';
 }
 
-// 閉じるボタン以外でも画面外をクリックするとモーダルを閉じる
 window.onclick = function(event) {
   const modals = document.querySelectorAll('.modal');
   modals.forEach(modal => {
