@@ -12,13 +12,13 @@ body {
       0deg,
       transparent,
       transparent 29px,
-      rgba(255, 255, 255, 0.03) 30px
+      #ffffff 30px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 29px,
-      rgba(255, 255, 255, 0.03) 30px
+      #ffffff 30px
     );
   background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
   background-attachment: fixed;
