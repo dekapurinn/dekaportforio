@@ -2,91 +2,71 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Dekapurin Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_black_white_grid.css">
+  <script src="popup.js" defer></script>
 </head>
 <body>
-  <section id="overview">
-    <h2>概要</h2>
-    <p>ここに仮の自己紹介文が入ります。</p>
-  </section>
 
-  <section id="hero">
+  <!-- ナビゲーション -->
+  <nav>
+    <ul>
+      <li><a href="#about">概要</a></li>
+      <li><a href="#personal">個人制作</a></li>
+      <li><a href="#works">実績</a></li>
+      <li><a href="#sns">SNS</a></li>
+    </ul>
+  </nav>
+
+  <!-- 概要 -->
+  <section id="about">
     <h1>Dekapurin</h1>
+    <p>こちらは3DCGアーティストDekapurinのポートフォリオサイトです。</p>
   </section>
 
+  <!-- 個人制作 -->
   <section id="personal">
     <h2>個人制作</h2>
-    <div class="work-gallery two-column">
+    <div class="work-gallery">
       <div class="work" onclick="openModal('modal1')">
-        <img src="images/work1.jpg" alt="作品1">
-        <h3>作品タイトル1</h3>
+        <img src="images/personal1.jpg" alt="作品1">
+        <h3>個人作品1</h3>
       </div>
       <div class="work" onclick="openModal('modal2')">
-        <img src="images/work2.jpg" alt="作品2">
-        <h3>作品タイトル2</h3>
+        <img src="images/personal2.jpg" alt="作品2">
+        <h3>個人作品2</h3>
       </div>
     </div>
   </section>
 
-  <section id="commercial">
+  <!-- 実績 -->
+  <section id="works">
     <h2>実績</h2>
-    <div class="work-gallery two-column">
+    <div class="work-gallery">
       <div class="work" onclick="openModal('modal3')">
-        <img src="images/work3.jpg" alt="作品3">
-        <h3>作品タイトル3</h3>
+        <img src="images/work1.jpg" alt="実績1">
+        <h3>実績作品1</h3>
       </div>
       <div class="work" onclick="openModal('modal4')">
-        <img src="images/work4.jpg" alt="作品4">
-        <h3>作品タイトル4</h3>
+        <img src="images/work2.jpg" alt="実績2">
+        <h3>実績作品2</h3>
       </div>
     </div>
   </section>
 
+  <!-- SNS -->
   <section id="sns">
-    <h2>SNS</h2>
-    <ul>
-      <li><a href="https://twitter.com/dekapurinn" target="_blank">Twitter</a></li>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">YouTube</a></li>
-    </ul>
+    <h2>各種SNS</h2>
+    <p><a href="https://twitter.com/dekapurinn" target="_blank">Twitter</a></p>
+    <p><a href="https://github.com/dekapurinn" target="_blank">GitHub</a></p>
   </section>
 
-  <!-- モーダル定義 -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal1')">&times;</span>
-      <h3>作品タイトル1</h3>
-      <p>この作品の詳細情報をここに記載します。</p>
-    </div>
-  </div>
+  <!-- モーダル（ポップアップ） -->
+  <div id="modal1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal1')">&times;</span><h2>個人作品1</h2><p>この作品は…</p></div></div>
+  <div id="modal2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal2')">&times;</span><h2>個人作品2</h2><p>この作品は…</p></div></div>
+  <div id="modal3" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal3')">&times;</span><h2>実績作品1</h2><p>この作品は…</p></div></div>
+  <div id="modal4" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal4')">&times;</span><h2>実績作品2</h2><p>この作品は…</p></div></div>
 
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal2')">&times;</span>
-      <h3>作品タイトル2</h3>
-      <p>この作品の詳細情報をここに記載します。</p>
-    </div>
-  </div>
-
-  <div id="modal3" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal3')">&times;</span>
-      <h3>作品タイトル3</h3>
-      <p>この作品の詳細情報をここに記載します。</p>
-    </div>
-  </div>
-
-  <div id="modal4" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal4')">&times;</span>
-      <h3>作品タイトル4</h3>
-      <p>この作品の詳細情報をここに記載します。</p>
-    </div>
-  </div>
-
-  <script src="script..js"></script>
 </body>
 </html>
