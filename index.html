@@ -4,114 +4,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dekapurin 3DCG Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="popup.js"></script>
+  <title>Dekapurin Portfolio</title>
+  <link rel="stylesheet" href="style_black_white_grid.css">
 </head>
 <body>
-  <header>
-    <h1 style="text-align:center; font-size: 3rem; margin-top: 2rem;">dekapurin</h1>
-  </header>
+  <section id="overview">
+    <h2>概要</h2>
+    <p>ここに仮の自己紹介文が入ります。</p>
+  </section>
 
-  <main>
-    <section>
-      <h2>個人制作</h2>
-      <div class="work-gallery">
-        <div class="work" data-modal="modal1">
-          <div class="image-container">
-            <img src="images/work1.jpg" alt="作品1">
-          </div>
-          <h3>作品タイトル 1</h3>
-        </div>
-        <div class="work" data-modal="modal2">
-          <div class="image-container">
-            <img src="images/work2.jpg" alt="作品2">
-          </div>
-          <h3>作品タイトル 2</h3>
-        </div>
+  <section id="hero">
+    <h1>Dekapurin</h1>
+  </section>
+
+  <section id="personal">
+    <h2>個人制作</h2>
+    <div class="work-gallery two-column">
+      <div class="work" onclick="openModal('modal1')">
+        <img src="images/work1.jpg" alt="作品1">
+        <h3>作品タイトル1</h3>
       </div>
-    </section>
-
-    <section>
-      <h2>実績</h2>
-      <div class="work-gallery">
-        <div class="work" data-modal="modal3">
-          <div class="image-container">
-            <img src="images/work3.jpg" alt="作品3">
-          </div>
-          <h3>実績タイトル 1</h3>
-        </div>
-        <div class="work" data-modal="modal4">
-          <div class="image-container">
-            <img src="images/work4.jpg" alt="作品4">
-          </div>
-          <h3>実績タイトル 2</h3>
-        </div>
+      <div class="work" onclick="openModal('modal2')">
+        <img src="images/work2.jpg" alt="作品2">
+        <h3>作品タイトル2</h3>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- モーダル -->
+  <section id="commercial">
+    <h2>実績</h2>
+    <div class="work-gallery two-column">
+      <div class="work" onclick="openModal('modal3')">
+        <img src="images/work3.jpg" alt="作品3">
+        <h3>作品タイトル3</h3>
+      </div>
+      <div class="work" onclick="openModal('modal4')">
+        <img src="images/work4.jpg" alt="作品4">
+        <h3>作品タイトル4</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="sns">
+    <h2>SNS</h2>
+    <ul>
+      <li><a href="https://twitter.com/dekapurinn" target="_blank">Twitter</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">YouTube</a></li>
+    </ul>
+  </section>
+
+  <!-- モーダル定義 -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <span class="close" data-close="modal1">&times;</span>
-      <h2>作品タイトル 1</h2>
-      <p>作品の詳細説明文です。</p>
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h3>作品タイトル1</h3>
+      <p>この作品の詳細情報をここに記載します。</p>
     </div>
   </div>
 
   <div id="modal2" class="modal">
     <div class="modal-content">
-      <span class="close" data-close="modal2">&times;</span>
-      <h2>作品タイトル 2</h2>
-      <p>作品の詳細説明文です。</p>
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h3>作品タイトル2</h3>
+      <p>この作品の詳細情報をここに記載します。</p>
     </div>
   </div>
 
   <div id="modal3" class="modal">
     <div class="modal-content">
-      <span class="close" data-close="modal3">&times;</span>
-      <h2>実績タイトル 1</h2>
-      <p>実績の詳細説明文です。</p>
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h3>作品タイトル3</h3>
+      <p>この作品の詳細情報をここに記載します。</p>
     </div>
   </div>
 
   <div id="modal4" class="modal">
     <div class="modal-content">
-      <span class="close" data-close="modal4">&times;</span>
-      <h2>実績タイトル 2</h2>
-      <p>実績の詳細説明文です。</p>
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h3>作品タイトル4</h3>
+      <p>この作品の詳細情報をここに記載します。</p>
     </div>
   </div>
 
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.8);
-    }
-    .modal-content {
-      background-color: #111;
-      margin: 10% auto;
-      padding: 20px;
-      border: 1px solid #fff;
-      width: 80%;
-      color: white;
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      cursor: pointer;
-    }
-    .close:hover {
-      color: #fff;
-    }
-  </style>
-
+  <script src="popup.js"></script>
 </body>
 </html>
