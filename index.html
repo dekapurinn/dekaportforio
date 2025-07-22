@@ -2,71 +2,93 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dekapurin Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style_two_columns.css" />
+  <script src="popup.js" defer></script>
 </head>
 <body>
 
-  <!-- ナビゲーション -->
   <nav>
     <ul>
-      <li><a href="#about">概要</a></li>
-      <li><a href="#personal">個人制作</a></li>
-      <li><a href="#works">実績</a></li>
-      <li><a href="#sns">SNS</a></li>
+      <li><a href="#overview">概要</a></li>
+      <li><a href="#personal-work">個人制作</a></li>
+      <li><a href="#achievements">実績</a></li>
+      <li><a href="#sns">各種SNS</a></li>
     </ul>
   </nav>
 
-  <!-- 概要 -->
-  <section id="about">
+  <header id="overview">
     <h1>Dekapurin</h1>
-    <p>こちらは3DCGアーティストDekapurinのポートフォリオサイトです。</p>
-  </section>
+    <p>（ここに概要文を入れてください）</p>
+  </header>
 
-  <!-- 個人制作 -->
-  <section id="personal">
+  <section id="personal-work">
     <h2>個人制作</h2>
-    <div class="work-gallery">
+    <div class="work-gallery two-columns">
       <div class="work" onclick="openModal('modal1')">
-        <img src="images/personal1.jpg" alt="作品1">
-        <h3>個人作品1</h3>
+        <img src="images/work1.jpg" alt="作品1" />
+        <h3>作品タイトル 1</h3>
       </div>
       <div class="work" onclick="openModal('modal2')">
-        <img src="images/personal2.jpg" alt="作品2">
-        <h3>個人作品2</h3>
+        <img src="images/work2.jpg" alt="作品2" />
+        <h3>作品タイトル 2</h3>
       </div>
     </div>
   </section>
 
-  <!-- 実績 -->
-  <section id="works">
+  <section id="achievements">
     <h2>実績</h2>
-    <div class="work-gallery">
+    <div class="work-gallery two-columns">
       <div class="work" onclick="openModal('modal3')">
-        <img src="images/work1.jpg" alt="実績1">
-        <h3>実績作品1</h3>
+        <img src="images/work3.jpg" alt="実績1" />
+        <h3>実績タイトル 1</h3>
       </div>
       <div class="work" onclick="openModal('modal4')">
-        <img src="images/work2.jpg" alt="実績2">
-        <h3>実績作品2</h3>
+        <img src="images/work4.jpg" alt="実績2" />
+        <h3>実績タイトル 2</h3>
       </div>
     </div>
   </section>
 
-  <!-- SNS -->
   <section id="sns">
     <h2>各種SNS</h2>
-    <p><a href="https://twitter.com/dekapurinn" target="_blank">Twitter</a></p>
-    <p><a href="https://github.com/dekapurinn" target="_blank">GitHub</a></p>
+    <p>Twitter: <a href="https://twitter.com/your_handle" target="_blank">@your_handle</a></p>
   </section>
 
-  <!-- モーダル（ポップアップ） -->
-  <div id="modal1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal1')">&times;</span><h2>個人作品1</h2><p>この作品は…</p></div></div>
-  <div id="modal2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal2')">&times;</span><h2>個人作品2</h2><p>この作品は…</p></div></div>
-  <div id="modal3" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal3')">&times;</span><h2>実績作品1</h2><p>この作品は…</p></div></div>
-  <div id="modal4" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal4')">&times;</span><h2>実績作品2</h2><p>この作品は…</p></div></div>
+  <!-- モーダル -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h3>作品タイトル 1</h3>
+      <p>ここに詳細説明が入ります。</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h3>作品タイトル 2</h3>
+      <p>ここに詳細説明が入ります。</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h3>実績タイトル 1</h3>
+      <p>ここに詳細説明が入ります。</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h3>実績タイトル 2</h3>
+      <p>ここに詳細説明が入ります。</p>
+    </div>
+  </div>
 
 </body>
 </html>
