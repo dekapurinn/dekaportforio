@@ -2,89 +2,116 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dekapurin Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dekapurin 3DCG Portfolio</title>
+  <link rel="stylesheet" href="style_black_white_grid.css" />
+  <script defer src="popup.js"></script>
 </head>
 <body>
-
-  <!-- ヒーローロゴ -->
-  <header id="logo-hero">
-    <h1>dekapurin</h1>
+  <header>
+    <h1 style="text-align:center; font-size: 3rem; margin-top: 2rem;">dekapurin</h1>
   </header>
 
-  <!-- ナビゲーション -->
-  <nav>
-    <ul>
-      <li><a href="#overview">概要</a></li>
-      <li><a href="#personal">個人制作</a></li>
-      <li><a href="#works">実績</a></li>
-      <li><a href="#sns">SNS</a></li>
-    </ul>
-  </nav>
-
-  <!-- 概要 -->
-  <section id="overview">
-    <h2>概要</h2>
-    <p>ここに自己紹介やスキルセット（Blender, アニメーション, スカルプト, ハードサーフェスなど）を記載します。</p>
-  </section>
-
-  <!-- 個人制作 -->
-  <section id="personal">
-    <h2>個人制作</h2>
-
-    <div class="work-section">
-      <h3>個人作品 1</h3>
-      <div class="work">
-        <div class="image-container"><img src="images/work1.jpg" alt="作品1"></div>
-        <p>作品1の簡単な説明</p>
+  <main>
+    <section>
+      <h2>個人制作</h2>
+      <div class="work-gallery">
+        <div class="work" data-modal="modal1">
+          <div class="image-container">
+            <img src="images/work1.jpg" alt="作品1">
+          </div>
+          <h3>作品タイトル 1</h3>
+        </div>
+        <div class="work" data-modal="modal2">
+          <div class="image-container">
+            <img src="images/work2.jpg" alt="作品2">
+          </div>
+          <h3>作品タイトル 2</h3>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="work-section">
-      <h3>個人作品 2</h3>
-      <div class="work">
-        <div class="image-container"><img src="images/work2.jpg" alt="作品2"></div>
-        <p>作品2の簡単な説明</p>
+    <section>
+      <h2>実績</h2>
+      <div class="work-gallery">
+        <div class="work" data-modal="modal3">
+          <div class="image-container">
+            <img src="images/work3.jpg" alt="作品3">
+          </div>
+          <h3>実績タイトル 1</h3>
+        </div>
+        <div class="work" data-modal="modal4">
+          <div class="image-container">
+            <img src="images/work4.jpg" alt="作品4">
+          </div>
+          <h3>実績タイトル 2</h3>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <!-- モーダル -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" data-close="modal1">&times;</span>
+      <h2>作品タイトル 1</h2>
+      <p>作品の詳細説明文です。</p>
     </div>
-  </section>
+  </div>
 
-  <!-- 実績 -->
-  <section id="works">
-    <h2>実績</h2>
-
-    <div class="work-section">
-      <h3>実績作品 1</h3>
-      <div class="work">
-        <div class="image-container"><img src="images/work3.jpg" alt="実績1"></div>
-        <p>実績1の説明文</p>
-      </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" data-close="modal2">&times;</span>
+      <h2>作品タイトル 2</h2>
+      <p>作品の詳細説明文です。</p>
     </div>
+  </div>
 
-    <div class="work-section">
-      <h3>実績作品 2</h3>
-      <div class="work">
-        <div class="image-container"><img src="images/work4.jpg" alt="実績2"></div>
-        <p>実績2の説明文</p>
-      </div>
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" data-close="modal3">&times;</span>
+      <h2>実績タイトル 1</h2>
+      <p>実績の詳細説明文です。</p>
     </div>
-  </section>
+  </div>
 
-  <!-- SNS -->
-  <section id="sns">
-    <h2>SNS</h2>
-    <ul>
-      <li><a href="https://twitter.com/youraccount" target="_blank">Twitter</a></li>
-      <li><a href="https://instagram.com/youraccount" target="_blank">Instagram</a></li>
-    </ul>
-  </section>
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" data-close="modal4">&times;</span>
+      <h2>実績タイトル 2</h2>
+      <p>実績の詳細説明文です。</p>
+    </div>
+  </div>
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2025 dekapurin. All rights reserved.</p>
-  </footer>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      background-color: #111;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #fff;
+      width: 80%;
+      color: white;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #fff;
+    }
+  </style>
 
 </body>
 </html>
