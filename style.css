@@ -4,8 +4,8 @@ body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   color: #fff;
-  line-height: 1.6;
   background:
+    /* グリッド線（白） */
     repeating-linear-gradient(
       0deg,
       transparent,
@@ -17,12 +17,14 @@ body {
       transparent,
       transparent 29px,
       #ffffff 30px
-    );
+    ),
+    /* 白→黒グラデーション背景 */
     linear-gradient(to bottom, rgba(255,255,255,0.05), rgba(0,0,0,0.8)),
-    linear-gradient(to bottom, #1a1a1a 0%, #000000 100%),
-    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
-    background-attachment: fixed;
-  }
+    linear-gradient(to bottom, #1a1a1a 0%, #000000 100%);
+  background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
 
 /* ナビゲーション */
 nav {
@@ -125,6 +127,7 @@ h2 {
   text-decoration: none;
 }
 
+/* フッター */
 footer {
   text-align: center;
   padding: 2rem;
