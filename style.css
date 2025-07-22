@@ -1,5 +1,4 @@
 
-/* 全体リセットと基本フォント */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
@@ -9,32 +8,36 @@ body {
       0deg,
       transparent,
       transparent 59px,
-      #ffffff 60px
+      rgba(255, 255, 255, 0.05) 60px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 59px,
-      #ffffff 60px
+      rgba(255, 255, 255, 0.05) 60px
     ),
-  background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+    #000000;
+  background-size: 60px 60px, 60px 60px, 100% 100%;
   background-attachment: fixed;
   line-height: 1.6;
 }
 
-/* ロゴスタイル */
-#logo {
-  font-family: 'Arial Black', sans-serif;
-  font-size: 3rem;
-  color: white;
+/* 以下は共通スタイルを再掲（前回分含む） */
+
+#logo-hero {
+  background-color: #111;
+  padding: 3rem 2rem;
   text-align: center;
-  padding: 2rem 0 1rem 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
-/* ナビゲーション */
+#logo-hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #fff;
+}
+
 nav {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #222;
   padding: 1rem;
   position: sticky;
   top: 0;
@@ -63,47 +66,28 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* セクション全体 */
 section {
   padding: 4rem 2rem;
   max-width: 960px;
   margin: auto;
-  border-top: 1px solid rgba(255,255,255,0.2);
 }
 
-/* 見出し */
-h1, h2 {
+h1, h2, h3 {
   text-align: center;
-  margin-bottom: 1rem;
+  color: #fff;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-/* ヒーローセクション */
-#hero {
-  padding: 5rem 2rem;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-/* ギャラリー */
-.work-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+.work-section {
+  margin-bottom: 3rem;
 }
 
 .work {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #1a1a1a;
   padding: 1rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
 .work:hover {
@@ -125,19 +109,47 @@ h2 {
   transform: scale(1.05);
 }
 
-.work h3 {
-  margin: 0.5rem 0;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
 }
 
-.work a {
-  color: #ffd700;
+.modal-content {
+  background-color: #222;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
-/* フッター */
 footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #111;
+  color: #aaa;
 }
