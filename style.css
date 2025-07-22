@@ -1,12 +1,12 @@
-
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   color: #fff;
   background-color: #000;
+  /* グリッド線を薄い白で表示 */
   background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 59px, #fff 60px),
-    repeating-linear-gradient(90deg, transparent, transparent 59px, #fff 60px);
+    repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255, 255, 255, 0.1) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255, 255, 255, 0.1) 60px);
   background-size: 60px 60px;
   background-attachment: fixed;
   line-height: 1.6;
@@ -47,13 +47,15 @@ section {
 h1, h2 {
   text-align: center;
 }
-site-title {
-  font-size: 5rem;        /* ← ここで文字の大きさを設定 */
+
+#site-title {  /* IDセレクターに修正 */
+  font-size: 5rem;
   font-weight: bold;
   text-align: center;
   margin-top: 4rem;
   letter-spacing: 2px;
 }
+
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
